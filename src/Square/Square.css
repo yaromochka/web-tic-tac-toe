@@ -1,6 +1,6 @@
-button {
-    height: 90px;
-    width: 90px;
+.square {
+    height: 100px;
+    width: 100px;
     background-color: #fff6e4;
     border: 1px solid #000;
     cursor: pointer;
@@ -10,7 +10,7 @@ button {
     align-items: center;
 }
 
-button:hover {
+.square:hover {
     background-color: #f0f0f0;
     transition: .3s all ease;
 }
