@@ -8,3 +8,26 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.wrapper p {
+    color: bisque;
+    font-size: 30px;
+    margin-top: 30px
+}
+
+.start__ng {
+    margin-bottom: 20px;
+    background-color: #fffeef;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: 2px solid #000000;
+    font-size: 25px;
+    color: #222222;
+}
+
+.start__ng:hover {
+    background-color: #666666;
+    color: #f0f0f0;
+    transition: .3ms all ease;
+}
