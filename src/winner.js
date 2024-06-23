@@ -1,4 +1,15 @@
+
+
+
 export function calculateWinner(squares) {
+    function all(list) {
+        for (let i = 0; i < list.length; i++)
+            if (list[i] == null) {
+                return null
+            }
+        return "Ничья"
+    }
+
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -16,5 +27,5 @@ export function calculateWinner(squares) {
             return squares[a]
         }
     }
-    return null
+    return all(squares)
 }
