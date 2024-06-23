@@ -1,7 +1,6 @@
 .wrapper {
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
-    background-color: #222222;
 
     display: flex;
     align-items: center;
@@ -30,4 +29,29 @@
     background-color: #666666;
     color: #f0f0f0;
     transition: .3ms all ease;
+}
+
+
+.header__text{
+    border-bottom-width: 3px;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    background-color: #333333;
+    width: 100%;
+    height: 20%;
+    font-size: 35px;
+    padding: 30px 30px 30px 30px;
+    box-sizing: border-box;
+    color: beige;
+}
+
+.header__text p {
+    background-color: inherit;
+    display: inline-flex;
+    width: 50%;
+    box-sizing: content-box;
+}
+
+.countO {
+    justify-content: right;
 }
