@@ -1,17 +1,16 @@
 import "./Game.css"
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Board from "../Board/Board";
-import {calculateWinner} from "../winner";
+import { calculateWinner } from "../winner";
 
+let countX = 0
+let countO = 0
 
 export default function Game() {
     const [board, setBoard] = useState(Array(9).fill(null))
     const [xIsNext, setXIsNext] = useState(true)
 
     const winner = calculateWinner(board)
-
-    // const [countX, setNewCountX] = useState(0)
-    // const [countO, setNewCountO] = useState(0)
 
     const handleClick = (index) => {
         const boardCopy = [...board]
@@ -30,21 +29,24 @@ export default function Game() {
             <button className={"start__ng"} onClick={() => {
                 setBoard(Array(9).fill(null));
                 setXIsNext(true);
-                }
+
+            }
             }>Новая игра</button>
         )
     }
 
+    if (winner === "X") countX += 0.5
+    if (winner === "O") countO += 0.5
+
     return (
         <div>
             <div className={"header__text"}>
-                <p className={"countX"}>Побед X: 0</p>
-                <p className={"countO"}>Побед O: 0</p>
+                <p className={"countX"}>Побед X: { countX }</p>
+                <p className={"countO"}>Побед O: { countO }</p>
             </div>
             <div className={"wrapper"}>
                 { startNewGame() }
-                <Board squares={board} click={handleClick}/>
-                {/*<p> { winner ? "Победитель: " + winner : "Следующий ход: " + (xIsNext ? "X" : "O") } </p>*/}
+                <Board squares={board} click={handleClick} />
                 <p>{ winner ? "Победитель: " + winner : "Следующий ход: " + ( xIsNext ? "X" : "O") }</p>
             </div>
         </div>
